@@ -1,0 +1,212 @@
+/* src/Calculator.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;100italic;200;200italic;300;300italic;400;400italic;500;500italic;600;600italic;700;700italic;800;800italic;900;900italic&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Add this to your CSS file */
+.history {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Light Mode */
+.light .history {
+  background-color: #f8f9fa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light .history li {
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode */
+.dark .history {
+  background-color: #1d1d1d;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.dark .history li {
+  background-color: #333333;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);
+}
+
+.history h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.history li {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.history li:hover {
+  transform: translateY(-3px);
+}
+
+.history li strong {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.history li p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666666;
+}
+
+
+
+
+button {
+  border: none;
+  outline: none;
+  appearance: none;
+  background: transparent;
+  color: inherit;
+}
+
+body {
+  background-color: #0f0f0f;
+  color: white;
+  background-image: linear-gradient(#161616 1px, transparent 1px),
+    linear-gradient(to right, #161616 1px, #0f0f0f 1px);
+  background-size: 20px 20px;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.developer span {
+  font-weight: 600;
+  color: #00ff62;
+}
+
+.calculator {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.displayWindow {
+  background-color: rgb(20, 20, 20);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 1rem;
+  height: 120px;
+  flex-direction: column;
+}
+
+.displayWindow .expression {
+  overflow-x: auto;
+  width: 100%;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  scrollbar-width: none;
+}
+
+.displayWindow .result {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+.keysWindow {
+  background-color: rgba(29, 29, 29);
+  padding: 1rem;
+}
+
+.keys_grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2px;
+}
+
+.keys_grid button {
+  padding: 0.8rem 1.2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Add border */
+}
+
+.keys_grid button:nth-child(10n) { /* Target every 9th button */
+  background-color: #ffa600; /* Set background color for buttons in column 9 */
+}
+
+.keys_grid button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+.keys_grid .number {
+  /* color:; */
+  font-weight: 600;
+}
+/* Adjustments for smaller screens */
+@media (max-width: 600px) {
+  .keys_grid button {
+    font-size: 0.8rem; /* Decrease font size for smaller screens */
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .displayWindow {
+    padding: 0.5rem; /* Adjust padding for smaller screens */
+  }
+
+  .displayWindow .expression {
+    font-size: 0.8rem; /* Decrease font size for smaller screens */
+  }
+
+  .displayWindow .result {
+    font-size: 1.2rem; /* Decrease font size for smaller screens */
+  }
+
+  .history {
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+
+  .history h2 {
+    font-size: 1.2rem; /* Decrease font size for smaller screens */
+  }
+
+  .history li {
+    padding: 5px; /* Adjust padding for smaller screens */
+  }
+
+  .history li strong {
+    margin-right: 3px; /* Adjust margin for smaller screens */
+    font-size: 0.9rem; /* Decrease font size for smaller screens */
+  }
+
+  .history li p {
+    font-size: 0.8rem; /* Decrease font size for smaller screens */
+  }
+}
