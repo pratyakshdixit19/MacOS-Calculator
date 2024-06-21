@@ -36,11 +36,6 @@ Copy code
 Install dependencies
 Using npm
 
-Clone the repository:
-
-git clone https://github.com/Gyanvardhan6205/Mac_os_ScientificCalculator
-cd ScientificCalculator Clone
-
 Install dependencies:
  -npm install
  
